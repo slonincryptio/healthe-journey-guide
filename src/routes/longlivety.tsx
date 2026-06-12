@@ -62,7 +62,7 @@ function LongevityPage() {
       
       <section className="es-section">
         <div className="es-section-inner">
-          <div className="es-s-label">Блок 02</div>
+          
           <h2 className="es-s-title">Для кого эта программа</h2>
           <ul className="ll-check-list">
             {[
