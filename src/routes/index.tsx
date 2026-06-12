@@ -124,9 +124,11 @@ function Index() {
           <div className="es-programs-grid">
             <article className="es-program-card">
               <div className="es-program-bg es-program-bg-gold">
-                <img src={programLongevityImg} alt="Здоровье и долголетие" className="es-program-img" loading="lazy" />
                 <div className="es-program-accent-gold" />
                 <div className="es-program-number es-program-number-gold">01</div>
+                <div className="es-program-photo-wrap">
+                  <img src={programLongevityImg} alt="Здоровье и долголетие" className="es-program-photo" loading="lazy" />
+                </div>
                 <div className="es-program-content">
                   <div className="es-program-tag es-program-tag-gold">Здоровье и долголетие</div>
                   <h3 className="es-program-title">Здоровье, молодость<br />и энергия на долгие годы</h3>
@@ -143,9 +145,11 @@ function Index() {
 
             <article className="es-program-card">
               <div className="es-program-bg es-program-bg-green">
-                <img src={programWeightImg} alt="Снижение веса под контролем врача" className="es-program-img es-program-img-weight" loading="lazy" />
                 <div className="es-program-accent-green" />
                 <div className="es-program-number es-program-number-green">02</div>
+                <div className="es-program-photo-wrap">
+                  <img src={programWeightImg} alt="Снижение веса под контролем врача" className="es-program-photo" loading="lazy" />
+                </div>
                 <div className="es-program-content">
                   <div className="es-program-tag es-program-tag-green">Снижение веса</div>
                   <h3 className="es-program-title">Снижение веса под контролем врача</h3>
