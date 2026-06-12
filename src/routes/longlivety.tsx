@@ -59,7 +59,7 @@ function LongevityPage() {
         </div>
       </section>
 
-      {/* BLOCK 2 — Для кого */}
+      
       <section className="es-section">
         <div className="es-section-inner">
           <div className="es-s-label">Блок 02</div>
