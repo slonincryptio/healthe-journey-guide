@@ -108,7 +108,7 @@ function LongevityPage() {
       {/* BLOCK 4 — Схема работы */}
       <section className="ll-scheme">
         <div className="es-section-inner">
-          <div className="es-s-label">Блок 04</div>
+          
           <h2 className="es-s-title">Схема работы</h2>
           <ol className="ll-steps">
             <li>
