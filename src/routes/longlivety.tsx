@@ -140,7 +140,7 @@ function LongevityPage() {
                   <span className="ll-biast" tabIndex={0}>
                     БИАСТ
                     <span className="ll-biast-tip" role="tooltip">
-                      <strong>Исследование из чего состоит вес:</strong>
+                      <strong>Из чего состоит вес:</strong>
                       <span>• сколько % жира и мышц</span>
                       <span>• сколько воды</span>
                       <span>• есть ли задержка жидкости</span>
@@ -337,7 +337,10 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 
 .ll-hero{padding:10rem 5rem 6rem;background:linear-gradient(180deg,var(--warm) 0%,var(--cream) 100%);position:relative;overflow:hidden}
 .ll-hero::after{content:'';position:absolute;right:-200px;top:-200px;width:600px;height:600px;border-radius:50%;border:0.5px solid rgba(184,147,90,0.12)}
-.ll-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.ll-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.ll-hero-photo-wrap{position:relative}
+.ll-hero-photo{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;position:relative;z-index:1}
+.ll-hero-photo-frame{position:absolute;top:-16px;right:-16px;left:16px;bottom:16px;border:0.5px solid rgba(184,147,90,0.4);z-index:0;pointer-events:none}
 .ll-hero-title{font-family:'Cormorant Garamond',serif;font-size:4.4rem;font-weight:300;line-height:1.05;color:var(--dark);margin:0 0 1.5rem}
 .ll-hero-title em{font-style:italic;color:var(--gold)}
 .ll-hero-lead{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--gold);margin:0 0 1.25rem;font-weight:300}
@@ -357,8 +360,7 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 
 .ll-results{padding:6rem 5rem;background:var(--warm)}
 .ll-results-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem}
-.ll-result-card{background:var(--cream);padding:2.5rem;border:0.5px solid var(--border);position:relative;transition:border-color .2s,transform .2s}
-.ll-result-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.ll-result-card{background:var(--cream);padding:2.5rem;border:0.5px solid var(--border);position:relative}
 .ll-result-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:1rem}
 .ll-result-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--dark);margin-bottom:0.75rem;line-height:1.25}
 .ll-result-desc{font-size:14px;color:var(--muted);line-height:1.7;font-weight:300}
@@ -366,8 +368,7 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 
 .ll-scheme{padding:6rem 5rem}
 .ll-steps{list-style:none;margin:0;padding:0;counter-reset:none;display:grid;gap:1rem}
-.ll-steps li{display:grid;grid-template-columns:80px 1fr;gap:2rem;align-items:start;padding:2rem;background:var(--cream);border:0.5px solid var(--border);transition:border-color .2s}
-.ll-steps li:hover{border-color:var(--gold)}
+.ll-steps li{display:grid;grid-template-columns:80px 1fr;gap:2rem;align-items:start;padding:2rem;background:var(--cream);border:0.5px solid var(--border)}
 .ll-step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);line-height:1}
 .ll-step-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--dark);margin-bottom:0.75rem;line-height:1.25;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
 .ll-step-body p{margin:0;font-size:15px;color:var(--muted);line-height:1.8;font-weight:300}
@@ -447,6 +448,7 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
   .es-nav-cta{padding:9px 16px;font-size:10px;letter-spacing:0.12em}
 
   .ll-hero{padding:6rem 1.5rem 3.5rem}
+  .ll-hero-inner{grid-template-columns:1fr;gap:2.5rem}
   .ll-hero-title{font-size:2.6rem}
   .ll-hero-lead{font-size:1.15rem}
 
