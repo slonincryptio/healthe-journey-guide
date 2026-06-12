@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
 import heroAsset from "@/assets/program-weight.png.asset.json";
+import forWhomAsset from "@/assets/weightlosing-forwhom.jpg.asset.json";
 
 export const Route = createFileRoute("/weightlosing")({
   head: () => ({
@@ -80,21 +81,26 @@ function WeightLosingPage() {
 
       {/* BLOCK 2 — Для кого */}
       <section className="es-section">
-        <div className="es-section-inner">
-          <h2 className="es-s-title">Для кого эта программа</h2>
-          <p className="wl-lead">
-            Программа создана для&nbsp;тех, кто хочет снизить вес физиологично — без&nbsp;жёстких диет, срывов и&nbsp;откатов:
-          </p>
-          <ul className="ll-check-list">
-            {[
-              "Хотите снизить вес на основе реакций своего организма",
-              "Готовы работать с данными: анализами, гаджетами и датчиком глюкозы",
-              "Пробовали разные подходы и хотите системный медицинский результат",
-              "Рассчитываете на долгосрочный результат и новый стиль жизни",
-            ].map((t) => (
-              <li key={t}><span className="ll-check">✓</span><span>{t}</span></li>
-            ))}
-          </ul>
+        <div className="es-section-inner ll-forwhom-inner">
+          <div className="ll-forwhom-text">
+            <h2 className="es-s-title">Для кого эта программа</h2>
+            <p className="wl-lead">
+              Программа создана для&nbsp;тех, кто хочет снизить вес физиологично — без&nbsp;жёстких диет, срывов и&nbsp;откатов:
+            </p>
+            <ul className="ll-check-list">
+              {[
+                "Хотите снизить вес на основе реакций своего организма",
+                "Готовы работать с данными: анализами, гаджетами и датчиком глюкозы",
+                "Пробовали разные подходы и хотите системный медицинский результат",
+                "Рассчитываете на долгосрочный результат и новый стиль жизни",
+              ].map((t) => (
+                <li key={t}><span className="ll-check">✓</span><span>{t}</span></li>
+              ))}
+            </ul>
+          </div>
+          <div className="ll-forwhom-photo">
+            <img src={forWhomAsset.url} alt="Екатерина Шадеева с овощами и фруктами" />
+          </div>
         </div>
       </section>
 
