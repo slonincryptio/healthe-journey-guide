@@ -279,6 +279,10 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .es-intro-list{list-style:none;margin:2.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .es-intro-list li{padding:8px 16px;border:0.5px solid var(--border);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
 
+.es-intro-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.es-intro-photo-wrap{position:relative}
+.es-intro-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;filter:grayscale(6%)}
+
 .es-divider{height:0.5px;background:var(--border)}
 
 .es-about{background:var(--dark);padding:6rem 5rem}
@@ -301,6 +305,8 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .es-program-bg{width:100%;display:block;position:relative;min-height:520px}
 .es-program-bg-gold{background:linear-gradient(135deg,#1C1612 0%,#2C2016 40%,#3A2A1A 100%)}
 .es-program-bg-green{background:linear-gradient(135deg,#151C18 0%,#1E2B22 40%,#253320 100%)}
+.es-program-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:grayscale(8%) brightness(0.92)}
+.es-program-img-weight{object-position:center 55%}
 .es-program-accent-gold{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(184,147,90,0.15) 0%,transparent 60%)}
 .es-program-accent-green{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(61,107,74,0.2) 0%,transparent 60%)}
 .es-program-number{position:absolute;top:2rem;left:2rem;font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;opacity:0.18;line-height:1}
@@ -377,6 +383,7 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
   .es-about-inner{grid-template-columns:1fr;gap:3rem}
   .es-programs-grid{grid-template-columns:1fr}
   .es-program-bg{min-height:460px}
+  .es-intro-inner{grid-template-columns:1fr;gap:2.5rem}
   .es-approach-grid{grid-template-columns:1fr 1fr}
 
   .es-footer{padding:3rem 1.5rem 2rem}
