@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
+import introImg from "@/assets/intro.jpg";
+import programLongevityImg from "@/assets/program-longevity.jpg";
+import programWeightImg from "@/assets/program-weight.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,19 +70,24 @@ function Index() {
 
       {/* INTRO / BLOCK 2 */}
       <section className="es-section">
-        <div className="es-section-inner">
-          <div className="es-s-label">Подход</div>
-          <h2 className="es-s-title">Научный подход<br />к питанию, весу и энергии</h2>
-          <p className="es-s-sub">
-            Я помогаю выстроить питание, режим и нутрициологическую поддержку с учётом особенностей вашего организма: анализов, гормонального фона, образа жизни, сна и активности — и индивидуальных целей.
-          </p>
-          <ul className="es-intro-list">
-            <li>Анализы</li>
-            <li>Гормональный фон</li>
-            <li>Образ жизни</li>
-            <li>Сон и активность</li>
-            <li>Индивидуальные цели</li>
-          </ul>
+        <div className="es-section-inner es-intro-inner">
+          <div className="es-intro-text">
+            <div className="es-s-label">Подход</div>
+            <h2 className="es-s-title">Научный подход<br />к питанию, весу и энергии</h2>
+            <p className="es-s-sub">
+              Я помогаю выстроить питание, режим и нутрициологическую поддержку с учётом особенностей вашего организма: анализов, гормонального фона, образа жизни, сна и активности — и индивидуальных целей.
+            </p>
+            <ul className="es-intro-list">
+              <li>Анализы</li>
+              <li>Гормональный фон</li>
+              <li>Образ жизни</li>
+              <li>Сон и активность</li>
+              <li>Индивидуальные цели</li>
+            </ul>
+          </div>
+          <div className="es-intro-photo-wrap">
+            <img src={introImg} alt="Екатерина Шадеева" className="es-intro-photo" loading="lazy" />
+          </div>
         </div>
       </section>
 
@@ -116,11 +124,12 @@ function Index() {
           <div className="es-programs-grid">
             <article className="es-program-card">
               <div className="es-program-bg es-program-bg-gold">
+                <img src={programLongevityImg} alt="Здоровье и долголетие" className="es-program-img" loading="lazy" />
                 <div className="es-program-accent-gold" />
                 <div className="es-program-number es-program-number-gold">01</div>
                 <div className="es-program-content">
                   <div className="es-program-tag es-program-tag-gold">Здоровье и долголетие</div>
-                  <h3 className="es-program-title">Longevity-протокол</h3>
+                  <h3 className="es-program-title">Здоровье, молодость<br />и энергия на долгие годы</h3>
                   <p className="es-program-desc">
                     Для тех, кто хочет лучше понимать состояние организма и работать с образом жизни для профилактики возрастных изменений. Комплексное сопровождение: от лабораторной диагностики до подбора БАДов и системы питания.
                   </p>
@@ -134,6 +143,7 @@ function Index() {
 
             <article className="es-program-card">
               <div className="es-program-bg es-program-bg-green">
+                <img src={programWeightImg} alt="Снижение веса под контролем врача" className="es-program-img es-program-img-weight" loading="lazy" />
                 <div className="es-program-accent-green" />
                 <div className="es-program-number es-program-number-green">02</div>
                 <div className="es-program-content">
