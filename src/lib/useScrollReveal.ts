@@ -48,23 +48,38 @@ export function useScrollReveal() {
           }
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      { threshold: [0, 0.05, 0.15], rootMargin: "0px 0px -5% 0px" },
     );
 
     [...sectionTargets, ...itemTargets].forEach((el) => io.observe(el));
 
-    // Failsafe: if anything is already above the fold on load, reveal immediately
-    requestAnimationFrame(() => {
+    // Failsafe 1: reveal anything already in/above viewport on mount
+    const revealVisible = () => {
       const vh = window.innerHeight;
       [...sectionTargets, ...itemTargets].forEach((el) => {
+        if (el.classList.contains("reveal-in")) return;
         const r = el.getBoundingClientRect();
-        if (r.top < vh * 0.9 && r.bottom > 0) {
+        if (r.top < vh * 0.95 && r.bottom > 0) {
           el.classList.add("reveal-in");
           io.unobserve(el);
         }
       });
-    });
+    };
+    requestAnimationFrame(revealVisible);
+    // Failsafe 2: scroll/resize handler in case IntersectionObserver misfires on mobile
+    const onScroll = () => revealVisible();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    // Failsafe 3: reveal everything after 4s no matter what
+    const t = window.setTimeout(() => {
+      [...sectionTargets, ...itemTargets].forEach((el) => el.classList.add("reveal-in"));
+    }, 4000);
 
-    return () => io.disconnect();
+    return () => {
+      io.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      window.clearTimeout(t);
+    };
   }, []);
 }
