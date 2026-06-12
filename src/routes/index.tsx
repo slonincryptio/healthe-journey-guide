@@ -116,7 +116,7 @@ function Index() {
 
           <div className="es-programs-grid">
             <article className="es-program-card">
-              <div className="es-program-bg es-program-bg-gold">
+              <div className="es-program-bg es-program-bg-gold" style={{ backgroundImage: `url(${programLongevity.url})` }}>
                 <div className="es-program-accent-gold" />
                 <div className="es-program-number es-program-number-gold">01</div>
                 <div className="es-program-content">
@@ -134,7 +134,7 @@ function Index() {
             </article>
 
             <article className="es-program-card">
-              <div className="es-program-bg es-program-bg-green">
+              <div className="es-program-bg es-program-bg-green" style={{ backgroundImage: `url(${programWeight.url})` }}>
                 <div className="es-program-accent-green" />
                 <div className="es-program-number es-program-number-green">02</div>
                 <div className="es-program-content">
