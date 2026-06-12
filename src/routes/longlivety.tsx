@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
 import heroAsset from "@/assets/longlivety-hero.png.asset.json";
+import forWhomAsset from "@/assets/longlivety-forwhom.jpg.asset.json";
 
 export const Route = createFileRoute("/longlivety")({
   head: () => ({
@@ -61,8 +62,8 @@ function LongevityPage() {
 
       
       <section className="es-section">
-        <div className="es-section-inner">
-          
+        <div className="es-section-inner ll-forwhom-inner">
+          <div className="ll-forwhom-text">
           <h2 className="es-s-title">Для кого эта программа</h2>
           <ul className="ll-check-list">
             {[
@@ -75,6 +76,10 @@ function LongevityPage() {
               <li key={t}><span className="ll-check">✓</span><span>{t}</span></li>
             ))}
           </ul>
+          </div>
+          <div className="ll-forwhom-photo">
+            <img src={forWhomAsset.url} alt="Екатерина Шадеева с овощами" />
+          </div>
         </div>
       </section>
 
