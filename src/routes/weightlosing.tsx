@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
 import heroAsset from "@/assets/program-weight.png.asset.json";
 import forWhomAsset from "@/assets/weightlosing-forwhom.jpg.asset.json";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/weightlosing")({
   head: () => ({
@@ -38,6 +39,7 @@ const Biast = () => (
 );
 
 function WeightLosingPage() {
+  useScrollReveal();
   return (
     <>
       <style>{pageCss}</style>
