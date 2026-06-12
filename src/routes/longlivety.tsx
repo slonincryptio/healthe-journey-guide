@@ -59,10 +59,10 @@ function LongevityPage() {
         </div>
       </section>
 
-      {/* BLOCK 2 — Для кого */}
+      
       <section className="es-section">
         <div className="es-section-inner">
-          <div className="es-s-label">Блок 02</div>
+          
           <h2 className="es-s-title">Для кого эта программа</h2>
           <ul className="ll-check-list">
             {[
@@ -83,7 +83,7 @@ function LongevityPage() {
       {/* BLOCK 3 — Что вы получите */}
       <section className="ll-results">
         <div className="es-section-inner">
-          <div className="es-s-label">Блок 03</div>
+          
           <h2 className="es-s-title">Что вы получите в&nbsp;результате программы</h2>
           <div className="ll-results-grid">
             {[
@@ -108,7 +108,7 @@ function LongevityPage() {
       {/* BLOCK 4 — Схема работы */}
       <section className="ll-scheme">
         <div className="es-section-inner">
-          <div className="es-s-label">Блок 04</div>
+          
           <h2 className="es-s-title">Схема работы</h2>
           <ol className="ll-steps">
             <li>
@@ -166,7 +166,7 @@ function LongevityPage() {
       {/* BLOCK 5 — Три месяца, три этапа */}
       <section className="ll-stages">
         <div className="es-section-inner">
-          <div className="es-s-label">Блок 05</div>
+          
           <h2 className="es-s-title">Три месяца. Три этапа.</h2>
           <div className="ll-stages-grid">
             {[
@@ -219,7 +219,7 @@ function LongevityPage() {
       {/* BLOCK 6 — Стоимость */}
       <section className="ll-pricing" id="pricing">
         <div className="es-section-inner">
-          <div className="es-s-label es-s-label-light">Блок 06</div>
+          
           <h2 className="ll-pricing-title">Стоимость программы</h2>
           <div className="ll-pricing-grid">
             <div className="ll-pricing-included">
