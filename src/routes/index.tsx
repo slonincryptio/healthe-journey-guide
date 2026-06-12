@@ -306,17 +306,17 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .es-programs-inner{max-width:1200px;margin:0 auto}
 .es-programs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:3rem}
 .es-program-card{position:relative;overflow:hidden}
-.es-program-bg{width:100%;display:block;position:relative;min-height:520px}
+.es-program-bg{width:100%;display:flex;flex-direction:column;position:relative;min-height:520px}
 .es-program-bg-gold{background:linear-gradient(135deg,#1C1612 0%,#2C2016 40%,#3A2A1A 100%)}
 .es-program-bg-green{background:linear-gradient(135deg,#151C18 0%,#1E2B22 40%,#253320 100%)}
-.es-program-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:grayscale(8%) brightness(0.92)}
-.es-program-img-weight{object-position:center 55%}
+.es-program-photo-wrap{position:relative;z-index:1;padding:3rem 2rem 1rem;display:flex;justify-content:center;align-items:flex-end;flex:1;min-height:280px}
+.es-program-photo{max-width:100%;max-height:340px;width:auto;height:auto;object-fit:contain;display:block;filter:grayscale(6%)}
 .es-program-accent-gold{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(184,147,90,0.15) 0%,transparent 60%)}
 .es-program-accent-green{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(61,107,74,0.2) 0%,transparent 60%)}
 .es-program-number{position:absolute;top:2rem;left:2rem;font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;opacity:0.18;line-height:1}
 .es-program-number-gold{color:var(--gold)}
 .es-program-number-green{color:var(--green-l)}
-.es-program-content{position:absolute;bottom:0;left:0;right:0;padding:2rem;background:linear-gradient(to top,rgba(28,22,18,0.95) 0%,rgba(28,22,18,0.6) 60%,transparent 100%)}
+.es-program-content{position:relative;z-index:1;padding:1.5rem 2rem 2rem}
 .es-program-tag{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.5rem}
 .es-program-tag-gold{color:var(--gold)}
 .es-program-tag-green{color:var(--green-l)}
