@@ -359,6 +359,10 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 
 .ll-check-list{list-style:none;margin:0;padding:0;display:grid;gap:1rem;max-width:760px}
 .ll-check-list li{display:flex;gap:1rem;font-size:16px;color:var(--text);line-height:1.7;font-weight:300;padding:1rem 0;border-bottom:0.5px solid var(--border)}
+.ll-forwhom-inner{display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center}
+.ll-forwhom-photo{position:relative;display:flex;justify-content:center;align-items:center;min-height:480px}
+.ll-forwhom-photo img{width:100%;max-width:460px;height:auto;object-fit:cover;border-radius:8px;-webkit-mask-image:radial-gradient(ellipse at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 92%);mask-image:radial-gradient(ellipse at center, rgba(0,0,0,1) 45%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 92%);filter:saturate(1.02)}
+@media (max-width:900px){.ll-forwhom-inner{grid-template-columns:1fr;gap:2rem}.ll-forwhom-photo{min-height:auto;order:-1}.ll-forwhom-photo img{max-width:340px}}
 .ll-check{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--gold-p);color:var(--gold);font-size:14px;font-weight:400}
 
 .es-divider{height:0.5px;background:var(--border)}
