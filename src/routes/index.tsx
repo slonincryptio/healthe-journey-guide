@@ -120,7 +120,7 @@ function Index() {
                 <div className="es-program-number es-program-number-gold">01</div>
                 <div className="es-program-content">
                   <div className="es-program-tag es-program-tag-gold">Здоровье и долголетие</div>
-                  <h3 className="es-program-title">Longevity-протокол</h3>
+                  <h3 className="es-program-title">Здоровье, молодость и энергия на долгие годы</h3>
                   <p className="es-program-desc">
                     Для тех, кто хочет лучше понимать состояние организма и работать с образом жизни для профилактики возрастных изменений. Комплексное сопровождение: от лабораторной диагностики до подбора БАДов и системы питания.
                   </p>
