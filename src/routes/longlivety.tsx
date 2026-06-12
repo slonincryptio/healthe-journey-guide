@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
 import heroAsset from "@/assets/longlivety-hero.png.asset.json";
 import forWhomAsset from "@/assets/longlivety-forwhom.jpg.asset.json";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/longlivety")({
   head: () => ({
@@ -24,6 +25,7 @@ export const Route = createFileRoute("/longlivety")({
 });
 
 function LongevityPage() {
+  useScrollReveal();
   return (
     <>
       <style>{pageCss}</style>
