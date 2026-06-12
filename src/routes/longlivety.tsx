@@ -219,7 +219,7 @@ function LongevityPage() {
       {/* BLOCK 6 — Стоимость */}
       <section className="ll-pricing" id="pricing">
         <div className="es-section-inner">
-          <div className="es-s-label es-s-label-light">Блок 06</div>
+          
           <h2 className="ll-pricing-title">Стоимость программы</h2>
           <div className="ll-pricing-grid">
             <div className="ll-pricing-included">
