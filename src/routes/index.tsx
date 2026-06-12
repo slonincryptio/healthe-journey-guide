@@ -69,7 +69,6 @@ function Index() {
       <section className="es-section">
         <div className="es-section-inner">
           <div className="es-s-label">Подход</div>
-          <h2 className="es-s-title">Научный подход<br />к питанию, весу и энергии</h2>
           <p className="es-s-sub">
             Я помогаю выстроить питание, режим и нутрициологическую поддержку с учётом особенностей вашего организма: анализов, гормонального фона, образа жизни, сна и активности — и индивидуальных целей.
           </p>
@@ -316,6 +315,7 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .es-approach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-top:3rem;border:0.5px solid var(--border)}
 .es-approach-item{background:var(--cream);padding:2rem 1.5rem;transition:background .2s}
 .es-approach-item:hover{background:var(--gold-p)}
+.es-approach-item:nth-last-child(2):hover{background:var(--cream)}
 .es-approach-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--border);line-height:1;margin-bottom:0.75rem}
 .es-approach-name{font-size:14px;font-weight:400;color:var(--dark);margin-bottom:0.5rem;letter-spacing:0.02em}
 .es-approach-text{font-size:13px;color:var(--muted);line-height:1.7;font-weight:300}
