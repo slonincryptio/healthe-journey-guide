@@ -356,7 +356,9 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
   .es-hero-left{padding:2.5rem 1.5rem 2rem}
   .es-hero-left::after{display:none}
   .es-hero h1{font-size:2.4rem}
-  .es-hero-right{height:80vw;min-height:320px}
+  .es-hero-right{height:115vw;min-height:480px;max-height:78vh}
+  .es-hero-img{object-position:center 28%}
+  .es-hero-img-overlay{background:linear-gradient(to top,var(--cream) 0%,transparent 14%)}
   .es-hero-credentials{bottom:1rem;right:1rem;gap:6px}
   .es-cred-item{font-size:10px;padding:6px 12px}
 
