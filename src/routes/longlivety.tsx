@@ -83,7 +83,7 @@ function LongevityPage() {
       {/* BLOCK 3 — Что вы получите */}
       <section className="ll-results">
         <div className="es-section-inner">
-          <div className="es-s-label">Блок 03</div>
+          
           <h2 className="es-s-title">Что вы получите в&nbsp;результате программы</h2>
           <div className="ll-results-grid">
             {[
