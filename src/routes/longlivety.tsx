@@ -363,7 +363,7 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .ll-forwhom-photo{position:relative;height:560px;overflow:hidden}
 .ll-forwhom-photo img{width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(8%);display:block}
 .ll-forwhom-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to left,var(--cream) 0%,transparent 18%),linear-gradient(to right,var(--cream) 0%,transparent 18%),linear-gradient(to bottom,var(--cream) 0%,transparent 15%),linear-gradient(to top,var(--cream) 0%,transparent 15%);pointer-events:none}
-@media (max-width:900px){.ll-forwhom-inner{grid-template-columns:1fr;gap:2rem}.ll-forwhom-photo{height:70vw;min-height:320px;order:-1}}
+@media (max-width:900px){.ll-forwhom-inner{grid-template-columns:1fr;gap:2rem}.ll-forwhom-photo{display:none}}
 .ll-check{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--gold-p);color:var(--gold);font-size:14px;font-weight:400}
 
 .es-divider{height:0.5px;background:var(--border)}
