@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
+import heroAsset from "@/assets/longlivety-hero.jpg.asset.json";
 
 export const Route = createFileRoute("/longlivety")({
   head: () => ({
@@ -38,16 +39,22 @@ function LongevityPage() {
       {/* BLOCK 1 — HERO */}
       <section className="ll-hero" id="top">
         <div className="ll-hero-inner">
-          <div className="es-hero-tag">Программа сопровождения</div>
-          <h1 className="ll-hero-title">
-            Здоровье, <em>молодость</em><br />и энергия
-          </h1>
-          <p className="ll-hero-lead">Для тех, кому 35+ лет — на&nbsp;основе данных вашего организма.</p>
-          <p className="ll-hero-desc">
-            3 месяца персонального сопровождения врача-нутрициолога: лабораторная диагностика, анализ питания, состава тела, сна, активности и нутрициологическая поддержка по показаниям.
-          </p>
-          <div className="es-hero-btns">
-            <a href="#pricing" className="es-btn-primary">Записаться на консультацию</a>
+          <div className="ll-hero-text">
+            <div className="es-hero-tag">Программа сопровождения</div>
+            <h1 className="ll-hero-title">
+              Здоровье, <em>молодость</em><br />и энергия
+            </h1>
+            <p className="ll-hero-lead">Для тех, кому 35+ лет — на&nbsp;основе данных вашего организма.</p>
+            <p className="ll-hero-desc">
+              3 месяца персонального сопровождения врача-нутрициолога: лабораторная диагностика, анализ питания, состава тела, сна, активности и нутрициологическая поддержка по показаниям.
+            </p>
+            <div className="es-hero-btns">
+              <a href="#pricing" className="es-btn-primary">Записаться на консультацию</a>
+            </div>
+          </div>
+          <div className="ll-hero-photo-wrap">
+            <div className="ll-hero-photo-frame" />
+            <img src={heroAsset.url} alt="Екатерина Шадеева" className="ll-hero-photo" />
           </div>
         </div>
       </section>
