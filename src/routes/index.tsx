@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
+import introImg from "@/assets/intro.jpg";
+import programLongevityImg from "@/assets/program-longevity.jpg";
+import programWeightImg from "@/assets/program-weight.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,19 +70,24 @@ function Index() {
 
       {/* INTRO / BLOCK 2 */}
       <section className="es-section">
-        <div className="es-section-inner">
-          <div className="es-s-label">Подход</div>
-          <h2 className="es-s-title">Научный подход<br />к питанию, весу и энергии</h2>
-          <p className="es-s-sub">
-            Я помогаю выстроить питание, режим и нутрициологическую поддержку с учётом особенностей вашего организма: анализов, гормонального фона, образа жизни, сна и активности — и индивидуальных целей.
-          </p>
-          <ul className="es-intro-list">
-            <li>Анализы</li>
-            <li>Гормональный фон</li>
-            <li>Образ жизни</li>
-            <li>Сон и активность</li>
-            <li>Индивидуальные цели</li>
-          </ul>
+        <div className="es-section-inner es-intro-inner">
+          <div className="es-intro-text">
+            <div className="es-s-label">Подход</div>
+            <h2 className="es-s-title">Научный подход<br />к питанию, весу и энергии</h2>
+            <p className="es-s-sub">
+              Я помогаю выстроить питание, режим и нутрициологическую поддержку с учётом особенностей вашего организма: анализов, гормонального фона, образа жизни, сна и активности — и индивидуальных целей.
+            </p>
+            <ul className="es-intro-list">
+              <li>Анализы</li>
+              <li>Гормональный фон</li>
+              <li>Образ жизни</li>
+              <li>Сон и активность</li>
+              <li>Индивидуальные цели</li>
+            </ul>
+          </div>
+          <div className="es-intro-photo-wrap">
+            <img src={introImg} alt="Екатерина Шадеева" className="es-intro-photo" loading="lazy" />
+          </div>
         </div>
       </section>
 
@@ -116,11 +124,12 @@ function Index() {
           <div className="es-programs-grid">
             <article className="es-program-card">
               <div className="es-program-bg es-program-bg-gold">
+                <img src={programLongevityImg} alt="Здоровье и долголетие" className="es-program-img" loading="lazy" />
                 <div className="es-program-accent-gold" />
                 <div className="es-program-number es-program-number-gold">01</div>
                 <div className="es-program-content">
                   <div className="es-program-tag es-program-tag-gold">Здоровье и долголетие</div>
-                  <h3 className="es-program-title">Longevity-протокол</h3>
+                  <h3 className="es-program-title">Здоровье, молодость<br />и энергия на долгие годы</h3>
                   <p className="es-program-desc">
                     Для тех, кто хочет лучше понимать состояние организма и работать с образом жизни для профилактики возрастных изменений. Комплексное сопровождение: от лабораторной диагностики до подбора БАДов и системы питания.
                   </p>
@@ -134,6 +143,7 @@ function Index() {
 
             <article className="es-program-card">
               <div className="es-program-bg es-program-bg-green">
+                <img src={programWeightImg} alt="Снижение веса под контролем врача" className="es-program-img es-program-img-weight" loading="lazy" />
                 <div className="es-program-accent-green" />
                 <div className="es-program-number es-program-number-green">02</div>
                 <div className="es-program-content">
@@ -269,6 +279,10 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .es-intro-list{list-style:none;margin:2.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .es-intro-list li{padding:8px 16px;border:0.5px solid var(--border);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
 
+.es-intro-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.es-intro-photo-wrap{position:relative}
+.es-intro-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;filter:grayscale(6%)}
+
 .es-divider{height:0.5px;background:var(--border)}
 
 .es-about{background:var(--dark);padding:6rem 5rem}
@@ -291,6 +305,8 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .es-program-bg{width:100%;display:block;position:relative;min-height:520px}
 .es-program-bg-gold{background:linear-gradient(135deg,#1C1612 0%,#2C2016 40%,#3A2A1A 100%)}
 .es-program-bg-green{background:linear-gradient(135deg,#151C18 0%,#1E2B22 40%,#253320 100%)}
+.es-program-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:grayscale(8%) brightness(0.92)}
+.es-program-img-weight{object-position:center 55%}
 .es-program-accent-gold{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(184,147,90,0.15) 0%,transparent 60%)}
 .es-program-accent-green{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(61,107,74,0.2) 0%,transparent 60%)}
 .es-program-number{position:absolute;top:2rem;left:2rem;font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;opacity:0.18;line-height:1}
@@ -367,6 +383,7 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
   .es-about-inner{grid-template-columns:1fr;gap:3rem}
   .es-programs-grid{grid-template-columns:1fr}
   .es-program-bg{min-height:460px}
+  .es-intro-inner{grid-template-columns:1fr;gap:2.5rem}
   .es-approach-grid{grid-template-columns:1fr 1fr}
 
   .es-footer{padding:3rem 1.5rem 2rem}
