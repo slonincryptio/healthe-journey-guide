@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
+import programLongevity from "@/assets/program-longevity.png.asset.json";
+import programWeight from "@/assets/program-weight.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -114,7 +116,7 @@ function Index() {
 
           <div className="es-programs-grid">
             <article className="es-program-card">
-              <div className="es-program-bg es-program-bg-gold">
+              <div className="es-program-bg es-program-bg-gold" style={{ backgroundImage: `url(${programLongevity.url})` }}>
                 <div className="es-program-accent-gold" />
                 <div className="es-program-number es-program-number-gold">01</div>
                 <div className="es-program-content">
@@ -132,7 +134,7 @@ function Index() {
             </article>
 
             <article className="es-program-card">
-              <div className="es-program-bg es-program-bg-green">
+              <div className="es-program-bg es-program-bg-green" style={{ backgroundImage: `url(${programWeight.url})` }}>
                 <div className="es-program-accent-green" />
                 <div className="es-program-number es-program-number-green">02</div>
                 <div className="es-program-content">
@@ -287,15 +289,15 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .es-programs-inner{max-width:1200px;margin:0 auto}
 .es-programs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:3rem}
 .es-program-card{position:relative;overflow:hidden}
-.es-program-bg{width:100%;display:block;position:relative;min-height:520px}
-.es-program-bg-gold{background:linear-gradient(135deg,#1C1612 0%,#2C2016 40%,#3A2A1A 100%)}
-.es-program-bg-green{background:linear-gradient(135deg,#151C18 0%,#1E2B22 40%,#253320 100%)}
-.es-program-accent-gold{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(184,147,90,0.15) 0%,transparent 60%)}
-.es-program-accent-green{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(61,107,74,0.2) 0%,transparent 60%)}
+.es-program-bg{width:100%;display:block;position:relative;min-height:560px;background-color:#1C1612;background-size:cover;background-position:center;background-repeat:no-repeat}
+.es-program-bg-gold{background-color:#1C1612}
+.es-program-bg-green{background-color:#151C18}
+.es-program-accent-gold{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,14,10,0.92) 0%,rgba(20,14,10,0.55) 45%,rgba(20,14,10,0.15) 75%,rgba(20,14,10,0) 100%)}
+.es-program-accent-green{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,18,14,0.92) 0%,rgba(12,18,14,0.55) 45%,rgba(12,18,14,0.15) 75%,rgba(12,18,14,0) 100%)}
 .es-program-number{position:absolute;top:2rem;left:2rem;font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:300;opacity:0.18;line-height:1}
 .es-program-number-gold{color:var(--gold)}
 .es-program-number-green{color:var(--green-l)}
-.es-program-content{position:absolute;bottom:0;left:0;right:0;padding:2rem;background:linear-gradient(to top,rgba(28,22,18,0.95) 0%,rgba(28,22,18,0.6) 60%,transparent 100%)}
+.es-program-content{position:absolute;bottom:0;left:0;right:0;padding:2rem 2rem 2rem;background:linear-gradient(to top,rgba(12,9,7,0.96) 0%,rgba(12,9,7,0.82) 55%,rgba(12,9,7,0.4) 90%,transparent 100%);backdrop-filter:blur(2px)}
 .es-program-tag{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:0.5rem}
 .es-program-tag-gold{color:var(--gold)}
 .es-program-tag-green{color:var(--green-l)}
