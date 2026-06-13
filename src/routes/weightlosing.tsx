@@ -446,10 +446,12 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .ll-pricing-included .ll-check{background:rgba(184,147,90,0.18);color:var(--gold);width:22px;height:22px;font-size:12px;margin-top:2px}
 .ll-pricing-note{font-style:italic;font-size:13px;color:rgba(228,207,160,0.6);margin:0;line-height:1.7}
 .ll-pricing-price{padding:2.5rem;background:linear-gradient(135deg,rgba(184,147,90,0.12),rgba(184,147,90,0.04));display:flex;flex-direction:column;justify-content:center;text-align:center}
-.ll-price-main{font-family:'Cormorant Garamond',serif;font-size:3.6rem;color:var(--gold);font-weight:300;line-height:1;display:inline-flex;align-items:baseline;justify-content:center}
-.ll-price-period{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(228,207,160,0.5);margin-bottom:8px}
+.ll-price-main{font-family:'Cormorant Garamond',serif;font-size:3.6rem;color:var(--gold-l);font-weight:300;line-height:1;display:inline-flex;align-items:baseline;justify-content:center}
+.ll-price-rub{font-size:14px;letter-spacing:0.1em;color:var(--gold-l);margin-top:6px}
+.ll-price-period{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(228,207,160,0.7);margin-top:8px}
 .ll-price-sep{height:0.5px;background:rgba(184,147,90,0.25);margin:1.5rem auto;width:60%}
-.ll-price-full-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(228,207,160,0.55);margin-bottom:1rem}
+.ll-price-full-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(228,207,160,0.7);margin-bottom:8px}
+.ll-price-full{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold-l);font-weight:300;margin-bottom:1.5rem}
 .ll-price-btns{display:flex;flex-direction:column;gap:10px}
 .es-btn-cta-gold{padding:14px 28px;background:var(--gold);color:var(--dark);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;font-family:'Tenor Sans',sans-serif;transition:background .2s;text-align:center}
 .es-btn-cta-gold:hover{background:var(--gold-l)}
