@@ -278,10 +278,12 @@ function WeightLosingPage() {
               <p className="ll-pricing-note">Запись на&nbsp;консультацию открыта. По&nbsp;всем вопросам пишите в&nbsp;мессенджере.</p>
             </div>
             <div className="ll-pricing-price">
-              <div className="ll-price-period">Длительность</div>
-              <div className="ll-price-main">12<span style={{fontSize:'1.6rem',marginLeft:8}}>недель</span></div>
+              <div className="ll-price-main">250&nbsp;EUR</div>
+              <div className="ll-price-rub">/ 25&nbsp;000&nbsp;руб.</div>
+              <div className="ll-price-period">в&nbsp;месяц</div>
               <div className="ll-price-sep" />
-              <div className="ll-price-full-label">Записаться на&nbsp;консультацию</div>
+              <div className="ll-price-full-label">Полный курс (3&nbsp;месяца):</div>
+              <div className="ll-price-full">750&nbsp;EUR&nbsp;/&nbsp;75&nbsp;000&nbsp;руб.</div>
               <div className="ll-price-btns">
                 <a href="https://wa.me/" className="es-btn-cta-gold">Написать в&nbsp;WhatsApp</a>
                 <a href="https://t.me/" className="es-btn-cta-outline">Написать в&nbsp;Telegram</a>
