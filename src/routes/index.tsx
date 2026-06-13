@@ -254,8 +254,8 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 .es-hero-desc{font-size:15px;color:var(--muted);line-height:1.85;max-width:460px;margin-bottom:2.5rem;font-weight:300}
 .es-hero-desc mark{background:none;color:var(--dark);font-weight:400}
 .es-hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
-.es-btn-primary{padding:14px 32px;background:var(--dark);color:var(--gold-l);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:'Tenor Sans',sans-serif;transition:background .2s}
-.es-btn-primary:hover{background:#2C2416}
+.es-btn-primary{padding:14px 32px;background:var(--dark);color:var(--gold-l);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:'Tenor Sans',sans-serif;transition:background .2s,color .2s}
+.es-btn-primary:hover{background:var(--gold-l);color:var(--dark)}
 .es-btn-secondary{padding:14px 32px;background:transparent;color:var(--dark);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;border:0.5px solid var(--border);cursor:pointer;font-family:'Tenor Sans',sans-serif;transition:border-color .2s,color .2s}
 .es-btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
 .es-hero-right{position:relative;height:min(100vh,860px);overflow:hidden}
