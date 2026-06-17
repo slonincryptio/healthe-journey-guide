@@ -313,7 +313,6 @@ function LongevityPage() {
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
       </footer>
 
-      <a href="#pricing" className="es-sticky-cta">Записаться</a>
     </>
   );
 }
