@@ -11,6 +11,7 @@ const useIsomorphicLayoutEffect =
 export function useScrollReveal() {
   useIsomorphicLayoutEffect(() => {
     if (typeof window === "undefined") return;
+    document.documentElement.classList.add("reveal-ready");
     const revealSelector =
       "section, .es-hero-left, .es-hero-right, .ll-hero-text, .ll-hero-photo-wrap, .es-section-inner, .es-about-photo-wrap, .es-about-inner > div:last-child, .ll-forwhom-text, .ll-forwhom-photo, .ll-result-card, .ll-step, .ll-stage, .ll-steps li, .es-program-card, .es-approach-item, .ll-check-list li, .wl-hero-pills span, .wl-cgm, .ll-pricing-included, .ll-pricing-price, .es-cta-inner, .es-feature, .es-stat";
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -51,7 +52,7 @@ export function useScrollReveal() {
           }
         }
       },
-      { threshold: [0, 0.01, 0.1], rootMargin: "0px 0px -8% 0px" },
+      { threshold: [0, 0.01, 0.08], rootMargin: "0px 0px -2% 0px" },
     );
 
     [...sectionTargets, ...itemTargets].forEach((el) => io.observe(el));
@@ -62,7 +63,7 @@ export function useScrollReveal() {
       [...sectionTargets, ...itemTargets].forEach((el) => {
         if (el.classList.contains("reveal-in")) return;
         const r = el.getBoundingClientRect();
-        if (r.top < vh * 0.88 && r.bottom > 0) {
+        if (r.top < vh * 0.96 && r.bottom > 0) {
           el.classList.add("reveal-in");
           io.unobserve(el);
         }
