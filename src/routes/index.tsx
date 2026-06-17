@@ -220,8 +220,6 @@ function Index() {
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
       </footer>
 
-      {/* Sticky CTA — mobile */}
-      <a href="#contact" className="es-sticky-cta">Записаться</a>
     </>
   );
 }
