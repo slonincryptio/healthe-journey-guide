@@ -1,4 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
+
+const useIsomorphicLayoutEffect =
+  typeof window === "undefined" ? useEffect : useLayoutEffect;
 
 /**
  * Adds .reveal-in to elements when they scroll into view.
@@ -6,13 +9,13 @@ import { useEffect } from "react";
  * (staggered). Honors prefers-reduced-motion.
  */
 export function useScrollReveal() {
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (typeof window === "undefined") return;
+    const revealSelector =
+      "section, .es-hero-left, .es-hero-right, .ll-hero-text, .ll-hero-photo-wrap, .es-section-inner, .es-about-photo-wrap, .es-about-inner > div:last-child, .ll-forwhom-text, .ll-forwhom-photo, .ll-result-card, .ll-step, .ll-stage, .ll-steps li, .es-program-card, .es-approach-item, .ll-check-list li, .wl-hero-pills span, .wl-cgm, .ll-pricing-included, .ll-pricing-price, .es-cta-inner, .es-feature, .es-stat";
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
-      document.querySelectorAll<HTMLElement>(
-        "section, .ll-result-card, .ll-step, .ll-stage, .ll-steps li, .es-program-card, .es-approach-item, .ll-check-list li, .wl-hero-pills span, .es-feature, .es-stat",
-      ).forEach((el) => el.classList.add("reveal-in"));
+      document.querySelectorAll<HTMLElement>(revealSelector).forEach((el) => el.classList.add("reveal-in"));
       return;
     }
 
@@ -22,7 +25,7 @@ export function useScrollReveal() {
     sectionTargets.forEach((el) => el.classList.add("reveal-section"));
 
     const itemSelector =
-      ".ll-result-card,.ll-step,.ll-stage,.ll-steps > li,.es-program-card,.es-approach-item,.ll-check-list > li,.wl-hero-pills > span,.es-feature,.es-stat";
+      ".es-hero-left,.es-hero-right,.ll-hero-text,.ll-hero-photo-wrap,.es-section-inner,.es-about-photo-wrap,.es-about-inner > div:last-child,.ll-forwhom-text,.ll-forwhom-photo,.ll-result-card,.ll-step,.ll-stage,.ll-steps > li,.es-program-card,.es-approach-item,.ll-check-list > li,.wl-hero-pills > span,.wl-cgm,.ll-pricing-included,.ll-pricing-price,.es-cta-inner,.es-feature,.es-stat";
     const itemTargets = Array.from(
       document.querySelectorAll<HTMLElement>(itemSelector),
     );
@@ -48,7 +51,7 @@ export function useScrollReveal() {
           }
         }
       },
-      { threshold: [0, 0.01, 0.1], rootMargin: "0px 0px 10% 0px" },
+      { threshold: [0, 0.01, 0.1], rootMargin: "0px 0px -8% 0px" },
     );
 
     [...sectionTargets, ...itemTargets].forEach((el) => io.observe(el));
@@ -59,7 +62,7 @@ export function useScrollReveal() {
       [...sectionTargets, ...itemTargets].forEach((el) => {
         if (el.classList.contains("reveal-in")) return;
         const r = el.getBoundingClientRect();
-        if (r.top < vh * 0.95 && r.bottom > 0) {
+        if (r.top < vh * 0.88 && r.bottom > 0) {
           el.classList.add("reveal-in");
           io.unobserve(el);
         }
@@ -70,10 +73,7 @@ export function useScrollReveal() {
     const onScroll = () => revealVisible();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
-    // Failsafe 3: reveal everything after 4s no matter what
-    const t = window.setTimeout(() => {
-      [...sectionTargets, ...itemTargets].forEach((el) => el.classList.add("reveal-in"));
-    }, 4000);
+    const t = window.setTimeout(revealVisible, 250);
 
     return () => {
       io.disconnect();
