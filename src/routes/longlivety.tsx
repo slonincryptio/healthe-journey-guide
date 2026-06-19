@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
-import heroAsset from "@/assets/longlivety-hero.png.asset.json";
-import forWhomAsset from "@/assets/longlivety-forwhom.jpg.asset.json";
-import diplomaMedical from "@/assets/diploma-medical.jpg.asset.json";
-import diplomaNutrition from "@/assets/diploma-nutrition.jpg.asset.json";
-import certificateRegistration from "@/assets/certificate-registration.pdf.asset.json";
+import heroAsset from "@/assets/longlivety-hero.png";
+import forWhomAsset from "@/assets/longlivety-forwhom.jpg";
+import diplomaMedical from "@/assets/diploma-medical.jpg";
+import diplomaNutrition from "@/assets/diploma-nutrition.jpg";
+import certificateRegistration from "@/assets/certificate-registration.pdf?url";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/longlivety")({
@@ -60,7 +60,7 @@ function LongevityPage() {
           </div>
           <div className="ll-hero-photo-wrap">
             <div className="ll-hero-photo-frame" />
-            <img src={heroAsset.url} alt="Екатерина Шадеева" className="ll-hero-photo" />
+            <img src={heroAsset} alt="Екатерина Шадеева" className="ll-hero-photo" />
           </div>
         </div>
       </section>
@@ -83,7 +83,7 @@ function LongevityPage() {
           </ul>
           </div>
           <div className="ll-forwhom-photo">
-            <img src={forWhomAsset.url} alt="Екатерина Шадеева с овощами" />
+            <img src={forWhomAsset} alt="Екатерина Шадеева с овощами" />
           </div>
         </div>
       </section>
@@ -302,14 +302,14 @@ function LongevityPage() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Образование</div>
-            <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о высшем образовании</a>
-            <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
+            <a href={diplomaMedical} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о высшем образовании</a>
+            <a href={diplomaNutrition} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Юридическая информация</div>
             <div className="es-footer-line">Шадеева Екатерина Юрьевна</div>
             <div className="es-footer-line">№M51601018V</div>
-            <a href={certificateRegistration.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Свидетельство о регистрации</a>
+            <a href={certificateRegistration} target="_blank" rel="noopener noreferrer" className="es-footer-link">Свидетельство о регистрации</a>
           </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
@@ -381,14 +381,15 @@ body{font-family:'Tenor Sans',sans-serif;background:var(--cream);color:var(--tex
 
 .ll-scheme{padding:6rem 5rem}
 .ll-steps{list-style:none;margin:0;padding:0;counter-reset:none;display:grid;gap:1rem}
-.ll-steps li{display:grid;grid-template-columns:80px 1fr;gap:2rem;align-items:start;padding:2rem;background:var(--cream);border:0.5px solid var(--border)}
+.ll-steps li{display:grid;grid-template-columns:80px 1fr;gap:2rem;align-items:start;padding:2rem;background:var(--cream);border:0.5px solid var(--border);position:relative;z-index:1}
+.ll-steps li:has(.ll-biast:hover),.ll-steps li:has(.ll-biast:focus),.ll-steps li:focus-within{z-index:60}
 .ll-step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold);line-height:1}
 .ll-step-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--dark);margin-bottom:0.75rem;line-height:1.25;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap}
 .ll-step-body p{margin:0;font-size:15px;color:var(--muted);line-height:1.8;font-weight:300}
 
 .ll-biast{display:inline-flex;align-items:center;padding:6px 18px;background:var(--gold);color:var(--cream);font-family:'Tenor Sans',sans-serif;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;border-radius:999px;cursor:pointer;position:relative;outline:none;transition:background .2s}
 .ll-biast:hover,.ll-biast:focus{background:var(--dark);color:var(--gold-l)}
-.ll-biast-tip{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);min-width:280px;max-width:320px;background:var(--dark);color:var(--gold-l);padding:1rem 1.25rem;font-family:'Tenor Sans',sans-serif;font-size:13px;line-height:1.7;letter-spacing:0.02em;text-transform:none;border-radius:6px;box-shadow:0 12px 30px rgba(28,22,18,0.25);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:50;display:flex;flex-direction:column;gap:4px;text-align:left}
+.ll-biast-tip{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);min-width:280px;max-width:320px;background:var(--dark);color:var(--gold-l);padding:1rem 1.25rem;font-family:'Tenor Sans',sans-serif;font-size:13px;line-height:1.7;letter-spacing:0.02em;text-transform:none;border-radius:6px;box-shadow:0 12px 30px rgba(28,22,18,0.25);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:100;display:flex;flex-direction:column;gap:4px;text-align:left;pointer-events:none}
 .ll-biast-tip strong{color:var(--gold);font-weight:400;margin-bottom:6px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase}
 .ll-biast-tip::before{content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(45deg);width:12px;height:12px;background:var(--dark)}
 .ll-biast:hover .ll-biast-tip,.ll-biast:focus .ll-biast-tip{opacity:1;visibility:visible}

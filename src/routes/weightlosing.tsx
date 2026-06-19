@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
-import heroAsset from "@/assets/program-weight.png.asset.json";
-import forWhomAsset from "@/assets/weightlosing-forwhom.jpg.asset.json";
-import diplomaMedical from "@/assets/diploma-medical.jpg.asset.json";
-import diplomaNutrition from "@/assets/diploma-nutrition.jpg.asset.json";
-import certificateRegistration from "@/assets/certificate-registration.pdf.asset.json";
+import heroAsset from "@/assets/program-weight.png";
+import forWhomAsset from "@/assets/weightlosing-forwhom.jpg";
+import diplomaMedical from "@/assets/diploma-medical.jpg";
+import diplomaNutrition from "@/assets/diploma-nutrition.jpg";
+import certificateRegistration from "@/assets/certificate-registration.pdf?url";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/weightlosing")({
@@ -79,7 +79,7 @@ function WeightLosingPage() {
           </div>
           <div className="ll-hero-photo-wrap">
             <div className="ll-hero-photo-frame" />
-            <img src={heroAsset.url} alt="Программа снижения веса" className="ll-hero-photo" />
+            <img src={heroAsset} alt="Программа снижения веса" className="ll-hero-photo" />
           </div>
         </div>
       </section>
@@ -104,7 +104,7 @@ function WeightLosingPage() {
             </ul>
           </div>
           <div className="ll-forwhom-photo">
-            <img src={forWhomAsset.url} alt="Екатерина Шадеева с овощами и фруктами" />
+            <img src={forWhomAsset} alt="Екатерина Шадеева с овощами и фруктами" />
           </div>
         </div>
       </section>
@@ -332,14 +332,14 @@ function WeightLosingPage() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Образование</div>
-            <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о&nbsp;высшем образовании</a>
-            <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
+            <a href={diplomaMedical} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о&nbsp;высшем образовании</a>
+            <a href={diplomaNutrition} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Юридическая информация</div>
             <div className="es-footer-line">Шадеева Екатерина Юрьевна</div>
             <div className="es-footer-line">№M51601018V</div>
-            <a href={certificateRegistration.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Свидетельство о&nbsp;регистрации</a>
+            <a href={certificateRegistration} target="_blank" rel="noopener noreferrer" className="es-footer-link">Свидетельство о&nbsp;регистрации</a>
           </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
