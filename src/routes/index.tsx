@@ -3,6 +3,8 @@ import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
 import programLongevity from "@/assets/program-longevity.png.asset.json";
 import programWeight from "@/assets/program-weight.png.asset.json";
+import diplomaMedical from "@/assets/diploma-medical.jpg.asset.json";
+import diplomaNutrition from "@/assets/diploma-nutrition.jpg.asset.json";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/")({
@@ -207,14 +209,13 @@ function Index() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Образование</div>
-            <div className="es-footer-line">Диплом о высшем образовании</div>
-            <div className="es-footer-line">Квалификация «Нутрициология»</div>
+            <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о высшем образовании</a>
+            <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Юридическая информация</div>
             <div className="es-footer-line">ИП Шадеева Екатерина Юрьевна</div>
             <div className="es-footer-line">ИНН —</div>
-            <a href="#" className="es-footer-link">Публичная оферта</a>
           </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
