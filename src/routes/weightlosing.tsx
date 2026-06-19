@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
 import heroAsset from "@/assets/program-weight.png.asset.json";
 import forWhomAsset from "@/assets/weightlosing-forwhom.jpg.asset.json";
+import diplomaMedical from "@/assets/diploma-medical.jpg.asset.json";
+import diplomaNutrition from "@/assets/diploma-nutrition.jpg.asset.json";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/weightlosing")({
@@ -330,14 +332,13 @@ function WeightLosingPage() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Образование</div>
-            <div className="es-footer-line">Диплом о&nbsp;высшем образовании</div>
-            <div className="es-footer-line">Квалификация «Нутрициология»</div>
+            <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о&nbsp;высшем образовании</a>
+            <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Юридическая информация</div>
             <div className="es-footer-line">ИП Шадеева Екатерина Юрьевна</div>
             <div className="es-footer-line">ИНН&nbsp;—</div>
-            <a href="#" className="es-footer-link">Публичная оферта</a>
           </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
