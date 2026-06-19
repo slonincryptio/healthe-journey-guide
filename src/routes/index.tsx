@@ -186,8 +186,8 @@ function Index() {
           <h2 className="es-cta-title">Готовы начать<br />работу над собой?</h2>
           <p className="es-cta-sub">Оставьте заявку, и я свяжусь с вами, чтобы обсудить программу и подобрать подходящий формат сопровождения.</p>
           <div className="es-cta-btns">
-            <a href="https://wa.me/" className="es-btn-cta-gold">Написать в WhatsApp</a>
-            <a href="https://t.me/" className="es-btn-cta-outline">Написать в Telegram</a>
+            <a href="https://wa.me/79265209709" className="es-btn-cta-gold">Написать в WhatsApp</a>
+            <a href="https://t.me/EkaterinaShadeeva" className="es-btn-cta-outline">Написать в Telegram</a>
           </div>
         </div>
       </section>
@@ -201,8 +201,8 @@ function Index() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Контакты</div>
-            <a href="https://wa.me/" className="es-footer-link">WhatsApp</a>
-            <a href="https://t.me/" className="es-footer-link">Telegram</a>
+            <a href="https://wa.me/79265209709" className="es-footer-link">WhatsApp</a>
+            <a href="https://t.me/EkaterinaShadeeva" className="es-footer-link">Telegram</a>
             <a href="mailto:hello@example.com" className="es-footer-link">Email</a>
           </div>
           <div className="es-footer-col">

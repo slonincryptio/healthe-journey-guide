@@ -285,8 +285,8 @@ function WeightLosingPage() {
               <div className="ll-price-full-label">Полный курс (3&nbsp;месяца):</div>
               <div className="ll-price-full">750&nbsp;EUR&nbsp;/&nbsp;75&nbsp;000&nbsp;руб.</div>
               <div className="ll-price-btns">
-                <a href="https://wa.me/" className="es-btn-cta-gold">Написать в&nbsp;WhatsApp</a>
-                <a href="https://t.me/" className="es-btn-cta-outline">Написать в&nbsp;Telegram</a>
+                <a href="https://wa.me/79265209709" className="es-btn-cta-gold">Написать в&nbsp;WhatsApp</a>
+                <a href="https://t.me/EkaterinaShadeeva" className="es-btn-cta-outline">Написать в&nbsp;Telegram</a>
               </div>
             </div>
           </div>
@@ -324,8 +324,8 @@ function WeightLosingPage() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Контакты</div>
-            <a href="https://wa.me/" className="es-footer-link">WhatsApp</a>
-            <a href="https://t.me/" className="es-footer-link">Telegram</a>
+            <a href="https://wa.me/79265209709" className="es-footer-link">WhatsApp</a>
+            <a href="https://t.me/EkaterinaShadeeva" className="es-footer-link">Telegram</a>
             <a href="mailto:hello@example.com" className="es-footer-link">Email</a>
           </div>
           <div className="es-footer-col">

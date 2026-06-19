@@ -255,8 +255,8 @@ function LongevityPage() {
               <div className="ll-price-full-label">Полный курс (3 месяца):</div>
               <div className="ll-price-full">750 EUR / 70 000 руб.</div>
               <div className="ll-price-btns">
-                <a href="https://wa.me/" className="es-btn-cta-gold">Написать в WhatsApp</a>
-                <a href="https://t.me/" className="es-btn-cta-outline">Написать в Telegram</a>
+                <a href="https://wa.me/79265209709" className="es-btn-cta-gold">Написать в WhatsApp</a>
+                <a href="https://t.me/EkaterinaShadeeva" className="es-btn-cta-outline">Написать в Telegram</a>
               </div>
             </div>
           </div>
@@ -294,8 +294,8 @@ function LongevityPage() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Контакты</div>
-            <a href="https://wa.me/" className="es-footer-link">WhatsApp</a>
-            <a href="https://t.me/" className="es-footer-link">Telegram</a>
+            <a href="https://wa.me/79265209709" className="es-footer-link">WhatsApp</a>
+            <a href="https://t.me/EkaterinaShadeeva" className="es-footer-link">Telegram</a>
             <a href="mailto:hello@example.com" className="es-footer-link">Email</a>
           </div>
           <div className="es-footer-col">
