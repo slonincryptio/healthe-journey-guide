@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
-import programLongevity from "@/assets/program-longevity.png.asset.json";
-import programWeight from "@/assets/program-weight.png.asset.json";
-import diplomaMedical from "@/assets/diploma-medical.jpg.asset.json";
-import diplomaNutrition from "@/assets/diploma-nutrition.jpg.asset.json";
-import certificateRegistration from "@/assets/certificate-registration.pdf.asset.json";
+import programLongevity from "@/assets/program-longevity.png";
+import programWeight from "@/assets/program-weight.png";
+import diplomaMedical from "@/assets/diploma-medical.jpg";
+import diplomaNutrition from "@/assets/diploma-nutrition.jpg";
+import certificateRegistration from "@/assets/certificate-registration.pdf?url";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/")({
@@ -121,7 +121,7 @@ function Index() {
 
           <div className="es-programs-grid">
             <article className="es-program-card">
-              <div className="es-program-bg es-program-bg-gold" style={{ backgroundImage: `url(${programLongevity.url})` }}>
+              <div className="es-program-bg es-program-bg-gold" style={{ backgroundImage: `url(${programLongevity})` }}>
                 <div className="es-program-accent-gold" />
                 <div className="es-program-number es-program-number-gold">01</div>
                 <div className="es-program-content">
@@ -139,7 +139,7 @@ function Index() {
             </article>
 
             <article className="es-program-card">
-              <div className="es-program-bg es-program-bg-green" style={{ backgroundImage: `url(${programWeight.url})` }}>
+              <div className="es-program-bg es-program-bg-green" style={{ backgroundImage: `url(${programWeight})` }}>
                 <div className="es-program-accent-green" />
                 <div className="es-program-number es-program-number-green">02</div>
                 <div className="es-program-content">
@@ -209,14 +209,14 @@ function Index() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Образование</div>
-            <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о высшем образовании</a>
-            <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
+            <a href={diplomaMedical} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о высшем образовании</a>
+            <a href={diplomaNutrition} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Юридическая информация</div>
             <div className="es-footer-line">Шадеева Екатерина Юрьевна</div>
             <div className="es-footer-line">№M51601018V</div>
-            <a href={certificateRegistration.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Свидетельство о регистрации</a>
+            <a href={certificateRegistration} target="_blank" rel="noopener noreferrer" className="es-footer-link">Свидетельство о регистрации</a>
           </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
