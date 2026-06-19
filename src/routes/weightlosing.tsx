@@ -4,6 +4,7 @@ import heroAsset from "@/assets/program-weight.png.asset.json";
 import forWhomAsset from "@/assets/weightlosing-forwhom.jpg.asset.json";
 import diplomaMedical from "@/assets/diploma-medical.jpg.asset.json";
 import diplomaNutrition from "@/assets/diploma-nutrition.jpg.asset.json";
+import certificateRegistration from "@/assets/certificate-registration.pdf.asset.json";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/weightlosing")({
@@ -328,12 +329,17 @@ function WeightLosingPage() {
             <div className="es-footer-h">Контакты</div>
             <a href="https://wa.me/79265209709" className="es-footer-link">WhatsApp</a>
             <a href="https://t.me/EkaterinaShadeeva" className="es-footer-link">Telegram</a>
-            <a href="mailto:hello@example.com" className="es-footer-link">Email</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Образование</div>
             <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о&nbsp;высшем образовании</a>
             <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
+          </div>
+          <div className="es-footer-col">
+            <div className="es-footer-h">Юридическая информация</div>
+            <div className="es-footer-line">Шадеева Екатерина Юрьевна</div>
+            <div className="es-footer-line">№M51601018V</div>
+            <a href={certificateRegistration.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Свидетельство о&nbsp;регистрации</a>
           </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
