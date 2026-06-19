@@ -12,11 +12,4 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  // Force nitro on with the Netlify preset so `vite build` produces a
-  // Netlify-ready deploy (functions + static assets) for self-hosted deploys.
-  // Inside Lovable's own sandbox build this is ignored — Lovable always
-  // forces the Cloudflare preset there.
-  nitro: {
-    preset: "netlify",
-  },
 });
