@@ -3,6 +3,8 @@ import heroImg from "@/assets/hero.jpg";
 import aboutImg from "@/assets/about.jpg";
 import programLongevity from "@/assets/program-longevity.png.asset.json";
 import programWeight from "@/assets/program-weight.png.asset.json";
+import diplomaMedical from "@/assets/diploma-medical.jpg.asset.json";
+import diplomaNutrition from "@/assets/diploma-nutrition.jpg.asset.json";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/")({
@@ -186,8 +188,8 @@ function Index() {
           <h2 className="es-cta-title">Готовы начать<br />работу над собой?</h2>
           <p className="es-cta-sub">Оставьте заявку, и я свяжусь с вами, чтобы обсудить программу и подобрать подходящий формат сопровождения.</p>
           <div className="es-cta-btns">
-            <a href="https://wa.me/" className="es-btn-cta-gold">Написать в WhatsApp</a>
-            <a href="https://t.me/" className="es-btn-cta-outline">Написать в Telegram</a>
+            <a href="https://wa.me/79265209709" className="es-btn-cta-gold">Написать в WhatsApp</a>
+            <a href="https://t.me/EkaterinaShadeeva" className="es-btn-cta-outline">Написать в Telegram</a>
           </div>
         </div>
       </section>
@@ -201,20 +203,19 @@ function Index() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Контакты</div>
-            <a href="https://wa.me/" className="es-footer-link">WhatsApp</a>
-            <a href="https://t.me/" className="es-footer-link">Telegram</a>
+            <a href="https://wa.me/79265209709" className="es-footer-link">WhatsApp</a>
+            <a href="https://t.me/EkaterinaShadeeva" className="es-footer-link">Telegram</a>
             <a href="mailto:hello@example.com" className="es-footer-link">Email</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Образование</div>
-            <div className="es-footer-line">Диплом о высшем образовании</div>
-            <div className="es-footer-line">Квалификация «Нутрициология»</div>
+            <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о высшем образовании</a>
+            <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Юридическая информация</div>
             <div className="es-footer-line">ИП Шадеева Екатерина Юрьевна</div>
             <div className="es-footer-line">ИНН —</div>
-            <a href="#" className="es-footer-link">Публичная оферта</a>
           </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>

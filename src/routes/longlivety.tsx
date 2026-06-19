@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import aboutImg from "@/assets/about.jpg";
 import heroAsset from "@/assets/longlivety-hero.png.asset.json";
 import forWhomAsset from "@/assets/longlivety-forwhom.jpg.asset.json";
+import diplomaMedical from "@/assets/diploma-medical.jpg.asset.json";
+import diplomaNutrition from "@/assets/diploma-nutrition.jpg.asset.json";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
 export const Route = createFileRoute("/longlivety")({
@@ -255,8 +257,8 @@ function LongevityPage() {
               <div className="ll-price-full-label">Полный курс (3 месяца):</div>
               <div className="ll-price-full">750 EUR / 70 000 руб.</div>
               <div className="ll-price-btns">
-                <a href="https://wa.me/" className="es-btn-cta-gold">Написать в WhatsApp</a>
-                <a href="https://t.me/" className="es-btn-cta-outline">Написать в Telegram</a>
+                <a href="https://wa.me/79265209709" className="es-btn-cta-gold">Написать в WhatsApp</a>
+                <a href="https://t.me/EkaterinaShadeeva" className="es-btn-cta-outline">Написать в Telegram</a>
               </div>
             </div>
           </div>
@@ -294,20 +296,19 @@ function LongevityPage() {
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Контакты</div>
-            <a href="https://wa.me/" className="es-footer-link">WhatsApp</a>
-            <a href="https://t.me/" className="es-footer-link">Telegram</a>
+            <a href="https://wa.me/79265209709" className="es-footer-link">WhatsApp</a>
+            <a href="https://t.me/EkaterinaShadeeva" className="es-footer-link">Telegram</a>
             <a href="mailto:hello@example.com" className="es-footer-link">Email</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Образование</div>
-            <div className="es-footer-line">Диплом о высшем образовании</div>
-            <div className="es-footer-line">Квалификация «Нутрициология»</div>
+            <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о высшем образовании</a>
+            <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
           </div>
           <div className="es-footer-col">
             <div className="es-footer-h">Юридическая информация</div>
             <div className="es-footer-line">ИП Шадеева Екатерина Юрьевна</div>
             <div className="es-footer-line">ИНН —</div>
-            <a href="#" className="es-footer-link">Публичная оферта</a>
           </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
