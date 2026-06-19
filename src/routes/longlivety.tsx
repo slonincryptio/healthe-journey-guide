@@ -305,11 +305,6 @@ function LongevityPage() {
             <a href={diplomaMedical.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Диплом о высшем образовании</a>
             <a href={diplomaNutrition.url} target="_blank" rel="noopener noreferrer" className="es-footer-link">Квалификация «Нутрициология»</a>
           </div>
-          <div className="es-footer-col">
-            <div className="es-footer-h">Юридическая информация</div>
-            <div className="es-footer-line">ИП Шадеева Екатерина Юрьевна</div>
-            <div className="es-footer-line">ИНН —</div>
-          </div>
         </div>
         <div className="es-footer-bottom">© {new Date().getFullYear()} Екатерина Шадеева</div>
       </footer>
